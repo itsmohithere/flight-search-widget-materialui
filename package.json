@@ -1,0 +1,57 @@
+{
+  "name": "flight-search-widget-materialui",
+  "version": "1.1.15",
+  "private": false,
+  "license": "(ISC OR GPL-3.0)",
+  "main": "core/index.js",
+  "module": "core/index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.8.3",
+    "@material-ui/icons": "^4.5.1",
+    "axios": "^0.19.1",
+    "eslint": "^6.8.0",
+    "moment": "^2.24.0",
+    "prop-types": "^15.7.2",
+    "react-dates": "^21.6.0",
+    "react-scripts": "3.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "transpile": "rm -rf core /s /q core && npm run build:cjs",
+    "build:cjs": "BABEL_ENV=cjs babel ./src/components -d core --copy-files"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itsmohithere/flight-search-panel"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "react-dom": "^16.12.0",
+    "react": "^16.12.0"
+  }
+}
